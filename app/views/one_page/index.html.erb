@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/assets/pts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+
+  </head>
+
+  <body id="dadBody">
+<!-- HEADER -->
+    <div class="row">
+      <div class="col-sm-12 headerContainer" style="background-color:#300012">
+        <%= render 'layouts/makeSpace' %>
+        <%= render 'layouts/makeTextWelcome' %>
+      </div>
+    </div>
+
+<!-- NAVIGATION BAR -->
+    <div class="row">
+      <div class="col-xs-12 container-fluid navContainer" id="home">
+        <nav class="navbar">
+
+          <ul class="nav ">
+            <li><a class="navtxt" href="#home">Home</a></li>
+            <li><a class="navtxt" href="#about">About</a></li>
+            <li><a class="navtxt" href="#portfolio">Portfolio</a></li>
+            <li><a class="navtxt" href="#contact">Contact</a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </div>
+
+<!-- ABOUT CONTAINER -->
+    <div class="row">
+      <div class="col-sm-12 aboutContainer" id="about" style="background-color:#f3f2ef; text-align: center">
+        <%= render 'layouts/aboutContainer' %>
+      </div>
+
+    </div>
+
+<!-- PROJECTS CONTAINER -->
+    <div class="row"> <!-- a gold i liked #d3cdba-->
+      <div class="col-sm-12 portfolioContainer" id="portfolio" style="background-color:#f9f8f7; text-align: center">
+        <%= render 'layouts/portfolioContainer' %>
+      </div>
+    </div>
+
+<!-- CONTACT ME CONTAINER -->
+    <div class="row"> <!-- #99c4c4 a light teal gray i liked -->
+      <div class="col-sm-12 contactContainer" id="contact" style="background-color:#f3f2ef; text-align: center">
+        <%= render 'layouts/contactContainer' %>
+      </div>
+    </div>
+
+<!-- FOOTER CONTAINER -->
+    <div class="row"> <!-- or #e1e8e5 color is perfect match -->
+      <div class="col-sm-12 footerContainer" id="footer" style="background-color:#5f3d4a; text-align: center">
+        <%= render 'layouts/footerContainer' %>
+      </div>
+    </div>
+
+<script>
+var homeSpot = document.getElementById("home");
+
+$('button').click(function() {
+  homeSpot.scrollIntoView();
+});
+
+</script>
+
+  </body>
+</html>

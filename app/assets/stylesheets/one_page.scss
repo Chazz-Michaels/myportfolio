@@ -1,0 +1,347 @@
+// Place all the styles related to the OnePage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Colors used in this app:
+  #f8f7f6 = grayLightest
+  #d8d6d4 = grayLighterOrange
+  #dad9d7 = grayLighter
+  #f3f2ef = grayLight
+  #0c0004 = maroonBlack
+  #300012 = maroonDark
+  #5f3d4a = maroonFaded
+  #440019 = maroonLight
+  #380d1e = maroonLighter
+  #ffeaac = yellowBright;
+  #fff3cd = yellowPale
+*/
+
+/*----------------------------------------------------*/
+/*Fonts*/
+$mainFont: 'Roboto Mono', monospace;
+$altFont: 'Roboto', sans-serif;
+/*Colors (bigger number = darker shade)*/
+$gray1: #f3f2ef;
+$gray2: #dad9d7;
+$gray3: #d8d6d4;
+$gray4: #f8f7f6;
+$maroon1: #380d1e;
+$maroon2: #440019;
+$maroon3: #5f3d4a;
+$maroon4: #300012;
+$maroon5: #0c0004;
+$yellow1: #fff3cd;
+$yellow2: #ffeaac;
+
+
+/* Header formatting */
+.headerContainer {
+  max-width: 1920px;
+  max-height: 1080px;
+  overflow: hidden;
+}
+
+:target:before {
+  content:"";
+  display:table;
+  clear: both;
+
+}
+
+#welcomeModal {
+  z-index: 1;
+  position: absolute;
+  bottom: 40%;
+}
+#viewmywork {
+  position: absolute;
+  z-index: 1;
+  background-color: $maroon1;
+  color: $gray1;
+  border-color: $gray1;
+  border-width: 2px;
+  border-radius: 4px;
+  box-shadow: 0 2 4 0;
+  filter: opacity(0.8);
+  transition: background-color 3s, border-color 3s, color 1s;
+  font-family: $mainFont;
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 160px;
+  max-width: 1920px;
+  width: 10%;
+  height: 5%;
+}
+#viewmywork:hover {
+  background-color: $gray1;
+  border-width: 2px;
+  border-color: $maroon4;
+  color: $maroon2;
+}
+
+/* ----------------------------------------------------*/
+/* navbar formatting */
+.navContainer {
+  margin: 0;
+  padding: 0;
+  height: 52px;
+  background-color: $gray3;
+}
+.navbar {
+  width: 99%;
+  height: inherit;
+  margin-left: 1%;
+}
+.navbar-nav {
+  font-family: $mainFont;
+  font-size: 1.2em;
+}
+.nav {
+  font-family: $mainFont;
+  font-size: 1.2em;
+  margin-top: 0.4%;
+}
+ li{
+  max-width: 130px;
+  float: left;
+  transition: background-color 3s;
+}
+.navtxt {
+  color: $maroon4;
+  border-radius: 5%;
+  transition: background-color 1s, border-radius 1s;
+}
+.navtxt:hover {
+  color: $gray1;
+  background-color: $maroon3 !important;
+  border-radius: 10%;
+}
+
+
+/*---------------------------------------------------------*/
+
+
+/* Icons and About Content Formatting */
+.aboutRow {
+  padding-bottom: 1%;
+}
+.headerText {
+  text-align: center;
+  font-family: $mainFont;
+  font-weight: 500;
+  color: $maroon1;
+  padding-bottom: 2%;
+}
+.iconWrapper {
+  border-radius: 50px 50px 0px 0px;
+  border: 2px solid $maroon1;
+  border-top: 10px solid $maroon1;
+  border-bottom: none;
+
+}
+.iconAll {
+  max-width: 200px;
+  width: 90%;
+  padding: 5%;
+}
+.iconCaption {
+  font-family: $mainFont;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: $maroon1;
+  padding-bottom: 0%;
+}
+/*------------------------------------------------------*/
+/* Coding About content here */
+.row {
+  margin: 0;
+  padding: 0;
+}
+.aboutContainer {
+  border-top: 2px solid $maroon5;
+}
+.aboutHeader {
+  margin-top: 4%;
+}
+.contentAboutContainer {
+  font-family: $altFont;
+  font-size: 1.6em;
+  /*color: $maroon1;*/
+  color: $maroon5;
+}
+.picAboutContainer {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  filter: grayscale(95%);
+  transition: filter 3s;
+}
+.picAboutContainer:hover {
+  filter: grayscale(5%);
+}
+.picAbout {
+  max-width: 300px;
+  width: 100%;
+  margin: 10%;
+  border: 2px solid $maroon5;
+  border-radius: 50%;
+}
+.textWrapper {
+  margin: 10%;
+  margin-bottom: 1%;
+  text-align: left;
+  text-indent: 30px;
+}
+.aboutLink {
+  font-family: $altFont;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: underline;
+  color: $gray1;
+}
+.musicPlayer {
+  vertical-align: middle;
+}
+.aboutLink:hover {
+  color: $maroon5;
+}
+.skillsTable {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.musicPlayer {
+  margin-top: 1%;
+  border: 3px solid $maroon5;
+}
+
+/*------------------------------------------------------*/
+/* Portfolio Styling begins here */
+.portfolioContainer {
+  border-top: 2px solid $maroon5;
+  font-family: $altFont;
+}
+.portfolioHeader {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+.portProjTitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: $maroon1;
+  padding-bottom: 5%;
+}
+.titleLink {
+  color: $maroon1;
+}
+.titleLink:hover {
+  color: $maroon1;
+}
+.projLinkText {
+  font-size: 0.8em;
+  color: $maroon1;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+.portProjDescription {
+  padding: 20%;
+  padding-top: 8%;
+  font-size: 1.2em;
+  color: $maroon1;
+}
+.sitePic {
+  width: 200px;
+  border: 2px solid $maroon1;
+  filter: grayscale(90%);
+  transition: filter 2s;
+}
+.sitePic:hover {
+  filter: grayscale(0%);
+}
+/*------------------------------------------------------*/
+/* Contact Styling begins here */
+.contactHeader {
+  margin-top: 4%;
+  padding-bottom: 2%;
+}
+.myEmailWrapper {
+  background-color: $gray4;
+  border: 7px solid $gray4;
+  border-radius: 20px;
+  transition: background-color 1s, border 1s, color 1s;
+  margin-bottom: 1.5%;
+  box-shadow: 1px 2px 10px 0px;
+}
+.myEmailWrapper:hover {
+  background-color: $gray2;
+  border: 7px solid $maroon4;
+}
+.myEmail {
+  margin-top: 3%;
+  padding-top: 2%;
+  margin-bottom: 5%;
+  font-family: $altFont;
+  font-size: 1.3em;
+  font-weight: 700;
+  /*color: $maroon1;*/
+  color: $maroon1;
+}
+.contactContainer {
+  border-top: 2px solid $maroon5;
+}
+.socialmediaIcons {
+  margin-bottom: 10%;
+  font-size: 50px;
+}
+.fa {
+  padding-top: 15px;
+  width: 100px;
+  height: 100px;
+  margin: 1%;
+  text-decoration: none;
+  background-color: $yellow1;
+  border: 10px solid $maroon1;
+  border-radius: 30%;
+  color: black;
+  transition: background-color 3s, border 2s, color 3s;
+}
+.fa:hover {
+    opacity: 0.7;
+    border: 10px solid $maroon2;
+    background-color: $maroon2;
+    text-decoration: none;
+    color: white;
+}
+.glyphicon {
+  border-radius: 30%;
+  padding: 10px;
+  font-size: 40px;
+  width: 10%;
+  color: $maroon1;
+  border: 4px solid $gray1;
+  transition: background-color 3s, color 3s, width 3s, border 3s;
+  margin-bottom: 2%;
+}
+.glyphicon:hover {
+  border: 4px solid $maroon5;
+  width: 15%;
+  background-color: $maroon1;
+  color: $yellow1;
+}
+/*------------------------------------------------------*/
+/* Footer Styling begins here */
+.footerContainer {
+  border-top: 2px solid $maroon5;
+}
+.footerHeader {
+  margin-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+  font-family: $mainFont;
+  font-weight: 500;
+  color: $yellow1;
+}
+.contactForm {
+  padding: 10%;
+}

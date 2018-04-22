@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+</head>
+
+
+<body id="portfolioBody">
+
+<!--###########################################################-->
+<!-- Header/Title here -->
+<div class="row">
+  <div class="col-sm-12"><h1 class="headerText portfolioHeader">Portfolio</h1></div>
+</div>
+
+<!--###########################################################-->
+<!-- Portfolio containers, one for each of my sites here -->
+<div class="row" class="allPortContainers">
+  <!-- Container 1 -->
+  <div class="col-sm-4" id="portContainer1">
+    <div class="row portProjTitle">
+      <a href="https://www.donut-ninja.herokuapp.com/" class="titleLink">Donut Ninja</a>
+    </div>
+    <div class="row portProjiFrame">
+      <a href="https://www.donut-ninja.herokuapp.com">
+        <%= image_tag("portfoliopic-donutninja.png", :id => "donutNinja", :class => "sitePic") %>
+      </a>
+    </div>
+    <div class="row portProjDescription">
+      <div class="projLinkText">donut-ninja.herokuapp.com</div>
+      A "2D" game designed from the ground up with the HTML5 canvas
+      and Javascript. How long can you last?
+    </div>
+  </div>
+
+  <!-- Container 2 -->
+  <div class="col-sm-4" id="portContainer2">
+    <div class="row portProjTitle">
+      <a href="https://www.yournumber.herokuapp.com" class="titleLink">What's Your Number?</a>
+    </div>
+    <div class="row portProjiFrame">
+      <a href="https://www.yournumber.herokuapp.com">
+        <%= image_tag("portfoliopic-whatsyournumber.png", :id => "yourNumber", :class => "sitePic") %>
+      </a>
+    </div>
+    <div class="row portProjDescription">
+      <div class="projLinkText">yournumber.herokuapp.com</div>
+      A fitness app to figure out your best macronutrient
+      ratio/amounts to achieve your fitness goals. Built with Angularjs.
+    </div>
+  </div>
+
+  <!-- Container 3 -->
+  <div class="col-sm-4" id="portContainer3">
+    <div class="row portProjTitle">
+      <a href="https://www.courtneydutra.com" class="titleLink">Courtney Dutra Yoga & Art</a>
+    </div>
+    <div class="row portProjiFrame">
+      <a href="https://www.courtneydutra.com">
+        <%= image_tag("portfoliopic-courtneydutra.png", :id => "courtneyDutra", :class => "sitePic") %>
+      </a>
+    </div>
+    <div class="row portProjDescription">
+      <div class="projLinkText">courtneydutra.com</div>
+      A website promoting both art work and local yoga classes.
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Container 3 -->
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" id="portContainer4">
+    <div class="row portProjTitle">
+      <a href="https://www.profilodayspa.com" class="titleLink">Profilo Day Spa</a>
+    </div>
+    <div class="row portProjiFrame">
+      <a href="https://www.profilodayspa.com">
+        <%= image_tag("portfoliopic-profilo.png", :id => "profilo", :class => "sitePic") %>
+      </a>
+    </div>
+    <div class="row portProjDescription">
+      <div class="projLinkText">profilodayspa.com</div>
+      An updated website for a thriving Salon and Spa.
+      Sketched the UI per request and built it
+      with another developer.
+    </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+
+</body>
+</html>

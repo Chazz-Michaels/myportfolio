@@ -1,0 +1,253 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body id="aboutBody">
+
+<!--###########################################################-->
+<!-- Header/Title here -->
+<div class="row">
+  <div class="col-sm-12"><h1 class="headerText aboutHeader">About Me</h1></div>
+</div>
+
+<!--###########################################################-->
+<!-- Icons here -->
+<div class="row aboutRow">
+  <div class="col-xs-3 iconWrapper" id="codingControl">
+    <%= image_tag("codingIcon.png", :class => "iconAll") %>
+    <div class="iconCaption">Coding</div>
+  </div>
+  <div class="col-xs-3 iconWrapper" id="fitnessControl">
+    <%= image_tag("fitnessIcon.png", :class => "iconAll") %>
+    <div class="iconCaption">Fitness</div>
+  </div>
+  <div class="col-xs-3 iconWrapper" id="musicControl">
+    <%= image_tag("musicIcon.png", :class => "iconAll") %>
+    <div class="iconCaption">Music</div>
+  </div>
+  <div class="col-xs-3 iconWrapper" id="gamingControl">
+    <%= image_tag("vgIcon.png", :class => "iconAll") %>
+    <div class="iconCaption">Gaming</div>
+  </div>
+</div>
+
+
+
+<!--###########################################################-->
+<!-- Coding content here -->
+<div class="row aboutContentWrapper" id="codingCtrlReceiver">
+  <div class="col-sm-4 picAboutContainer">
+    <%= image_tag("codingabout2.jpg", :id => "codingAboutPic", :class => "picAbout") %>
+  </div>
+  <div class="col-sm-8 contentAboutContainer">
+    <div class="textWrapper">
+      <p class="textAbout">
+        Hi, my name is Mike. I create responsive apps and
+        websites that are aesthetic and intuitive, using in-demand
+        frameworks. I work effectively in teams and independently,
+        and I'm passionate about building and contributing to world-class
+        applications.
+      </p>
+      <p class="textAbout">
+        I love to build with <strong>Ruby on Rails</strong>, and here
+        is the technology I currently use (list growing):
+      </p>
+
+        <table class="skillsTable" align="left">
+          <tr>
+            <td>Ruby on Rails</td>
+            <td>HTML5</td>
+          </tr>
+          <tr>
+            <td>CSS3</td>
+            <td>Javascript</td>
+          </tr>
+          <tr>
+            <td>Ruby</td>
+            <td>Git</td>
+          </tr>
+          <tr>
+            <td>Angularjs</td>
+            <td>jQuery</td>
+          </tr>
+          <tr>
+            <td>Bootstrap</td>
+            <td>Blender</td>
+          </tr>
+          <tr>
+            <td>GIMP</td>
+            <td></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+</div>
+
+<!--###########################################################-->
+<!-- Fitness content here -->
+<div class="row aboutContentWrapper" id="fitnessCtrlReceiver">
+  <div class="col-sm-4 picAboutContainer">
+    <%= image_tag("vim.png", :id => "fitnessAboutPic", :class => "picAbout") %>
+  </div>
+  <div class="col-sm-8 contentAboutContainer">
+    <div class="textWrapper">
+      <p class="textAbout">
+        I stay active. I grew up playing sports and skateboarding.
+        Today, I enjoy bodybuilding and I'm a Certified Personal Trainer.
+      </p>
+      <p class="textAbout">
+        Being goal-oriented, I love to help my personal training clients
+        achieve their fitness/ athletic goals. Since diet is a pivotal
+        aspect of achieving these goals, I built
+        <a href="#portfolio" class="aboutLink"><strong>What's Your Number?</strong></a>,
+        an app which allows for a quick way to
+        figure out your required macronutrient amounts.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--###########################################################-->
+<!-- Music content here -->
+<div class="row aboutContentWrapper" id="musicCtrlReceiver">
+  <div class="col-sm-4 picAboutContainer">
+    <%= image_tag("mcblogo3.png", :id => "musicAboutPic", :class => "picAbout") %>
+  </div>
+  <div class="col-sm-8 contentAboutContainer">
+    <div class="textWrapper">
+      <p class="textAbout">
+        I make music.
+        It started with violin in elementary; then FL Studio in middle school;
+        then electric guitar/ piano in high school.
+        In college, I wrote the 25-minute score
+        for <a href="https://www.youtube.com/watch?v=9eH5INVcLZ0" target="_blank" class="aboutLink">In & Out of Love</a>,
+        a sponsored video.
+      </p>
+      <p class="textAbout">
+        I configure, record, mix and master audio in a
+        variety of DAW's, including Ableton, Logic Pro X, Reason and FL.
+        Check out my music here: </p>
+
+        <a href="https://soundcloud.com/mikechasebeats" target="_blank" class="aboutLink musicLink">Electronic/Beats:</a>
+        <iframe id="soundcloudPlayer" class="musicPlayer" width="" height="" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
+        <br>
+        <a href="https://soundcloud.com/mikechasescores" target="_blank" class="aboutLink musicLink">Jazz/Guitar:</a>
+        <iframe id="soundcloudPlayer2" class="musicPlayer" width="" height="" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
+
+    </div>
+  </div>
+</div>
+
+<!--###########################################################-->
+<!-- Gaming content here -->
+<div class="row aboutContentWrapper" id="gamingCtrlReceiver">
+  <div class="col-sm-4 picAboutContainer">
+    <%= image_tag("gamingabout2.png", :id => "gamingAboutPic", :class => "picAbout") %>
+  </div>
+  <div class="col-sm-8 contentAboutContainer">
+    <div class="textWrapper">
+      <p class="textAbout">
+        I game and animate. I've been intrigued by video games
+        since I was a kid; everything about how they work and are built
+        fascinates me. This passion carries over into my coding via
+        animation and making games.
+      </p>
+      <p class="textAbout">
+        You can find my recent game designed on the HTML5 Canvas
+        with Javascript here:
+        <strong><a href="#portfolio" class="aboutLink">Donut Ninja</a></strong>.
+
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!--###########################################################-->
+<!-- Script to hide and show different containers -->
+<script>
+
+
+//When document loads, display the leftmost icon's container below
+$("#aboutBody").ready(function(){
+  $("#codingCtrlReceiver").css("display", "block");
+  $("#fitnessCtrlReceiver").css("display", "none");
+  $("#musicCtrlReceiver").css("display", "none");
+  $("#gamingCtrlReceiver").css("display", "none");
+});
+
+//when hover over coding
+$("#codingControl").hover(function(){
+    $("#codingControl, #codingCtrlReceiver").css("background-color", "#8f7780"); //f7ecd7 old
+    $("#codingCtrlReceiver").css("display", "block");
+    $("#fitnessCtrlReceiver").css("display", "none");
+    $("#musicCtrlReceiver").css("display", "none");
+    $("#gamingCtrlReceiver").css("display", "none");
+    $("#fitnessControl, #musicControl, #gamingControl").css("background-color", "#f3f2ef");
+    $(".musicPlayer").attr("src", "");
+    $(".musicPlayer").attr("height", "");
+    $(".musicPlayer").attr("width", "");
+    }, function(){
+    $("#codingCtrlReceiver").css("display", "block");
+    $("#codingCtrlReceiver").css("background-color", "#8f7780");
+    $("#codingControl").css("background-color", "#8f7780");
+});
+
+//when hover over fitness
+$("#fitnessControl").hover(function(){
+    $("#fitnessControl, #fitnessCtrlReceiver").css("background-color", "#8f7780");
+    $("#fitnessCtrlReceiver").css("display", "block");
+    $("#codingCtrlReceiver").css("display", "none");
+    $("#musicCtrlReceiver").css("display", "none");
+    $("#gamingCtrlReceiver").css("display", "none");
+    $("#codingControl, #musicControl, #gamingControl").css("background-color", "#f3f2ef");
+    $(".musicPlayer").attr("src", "");
+    $(".musicPlayer").attr("height", "");
+    $(".musicPlayer").attr("width", "");
+    }, function(){
+    $("#fitnessCtrlReceiver").css("display", "block");
+    $("#fitnessControl, #fitnessCtrlReceiver").css("background-color", "#8f7780");
+});
+
+//when hover over music
+$("#musicControl").hover(function(){
+    $("#musicControl, #musicCtrlReceiver").css("background-color", "#8f7780");
+    $("#musicCtrlReceiver").css("display", "block");
+    $("#fitnessCtrlReceiver").css("display", "none");
+    $("#codingCtrlReceiver").css("display", "none");
+    $("#gamingCtrlReceiver").css("display", "none");
+    $("#codingControl, #fitnessControl, #gamingControl").css("background-color", "#f3f2ef");
+    $("#soundcloudPlayer").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146009756&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true");
+    $("#soundcloudPlayer").attr("height", 120);
+    $("#soundcloudPlayer").attr("width", 50+"%");
+    $("#soundcloudPlayer2").attr("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170547003&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true");
+    $("#soundcloudPlayer2").attr("height", 120);
+    $("#soundcloudPlayer2").attr("width", 50+"%");
+    }, function(){
+    $("#musicCtrlReceiver").css("display", "block");
+    $("#musicControl, #musicCtrlReceiver").css("background-color", "#8f7780");
+});
+
+//when hover over gaming
+$("#gamingControl").hover(function(){
+    $("#gamingControl, #gamingCtrlReceiver").css("background-color", "#8f7780");
+    $("#gamingCtrlReceiver").css("display", "block");
+    $("#fitnessCtrlReceiver").css("display", "none");
+    $("#musicCtrlReceiver").css("display", "none");
+    $("#codingCtrlReceiver").css("display", "none");
+    $("#codingControl, #fitnessControl, #musicControl").css("background-color", "#f3f2ef");
+    $(".musicPlayer").attr("src", "");
+    $(".musicPlayer").attr("height", "");
+    $(".musicPlayer").attr("width", "");
+    }, function(){
+    $("#gamingCtrlReceiver").css("display", "block");
+    $("#gamingControl, #gamingCtrlReceiver").css("background-color", "#8f7780");
+});
+
+
+</script>
+</body>
+</html>

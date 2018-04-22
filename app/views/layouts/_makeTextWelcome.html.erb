@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+        <canvas id="welcomeModal"></canvas>
+
+
+
+<script>
+var canvas = document.getElementById("welcomeModal");
+var ctx = canvas.getContext("2d");
+canvas.width = (window.innerWidth + (window.innerWidth*0.015));
+canvas.height = window.innerHeight*0.12;
+var btn = document.createElement("BUTTON");
+var t = document.createTextNode("View My Work");
+btn.appendChild(t);
+document.body.appendChild(btn);
+btn.setAttribute("id", "viewmywork");
+var button = document.getElementById('viewmywork');
+button.style.bottom = 30 + "%";
+button.style.left = 45 + "%";
+canvas.style.backgroundColor = "#f3f2ef";
+canvas.style.filter = "opacity(0.7)";
+ctx.font = "18px 'Roboto Mono', monospace";
+ctx.fillStyle = "#0c0004";
+var indexOfArray = 0;
+var indexOfArray2 = 0;
+var textArray = [];
+var textArray2 = [];
+var letterSpacing = 10;
+var drawPosX = ((canvas.width/2)-(letterSpacing*11.5));
+var drawPosY = 40;
+var drawPosX2 = ((canvas.width/2)-(letterSpacing*15));
+var drawPosY2 = 80;
+var text1Done = false;
+var text2Done = false;
+var screenSizer = 0;
+var timeCounter = 0;
+//variables to control FPS with requestAnimationFrame
+var fps, fpsInterval, startTime, now, then, elapsed;
+fps = 10;
+fpsInterval = 1000 / fps;
+then = Date.now();
+startTime = then;
+//--------------------------------------------------------------------//
+
+function readText(yourText, speed){
+  textArray = yourText.split("");
+  fps = speed;
+  if(!speed){fps = 30;}
+}
+
+function readText2(yourText){
+  textArray2 = yourText.split("");
+}
+//--------------------------------------------------------------------//
+
+function drawText1(){
+  var textLength = (textArray.length - 1);
+  if(indexOfArray <= textLength){
+    ctx.fillText(textArray[indexOfArray], drawPosX, drawPosY);
+    drawPosX+=letterSpacing;
+    indexOfArray++;
+  }else if(indexOfArray > textLength){
+    text1Done = true;
+    indexOfArray = 0;
+    return;
+  }
+}
+
+function drawText2(){
+  var textLength = (textArray2.length - 1);
+  if(indexOfArray2 <= textLength){
+    ctx.fillText(textArray2[indexOfArray2], drawPosX2, drawPosY2);
+    drawPosX2+=letterSpacing;
+    indexOfArray2++;
+  }else if(indexOfArray2 > textLength){
+    text2Done = true;
+    indexOfArray2 = 0;
+    return;
+  }
+}
+//------------------------------------------------------------------//
+function animateText(){
+  now = Date.now();
+  elapsed = now - then;
+  if (elapsed > fpsInterval) {
+    then = now - (elapsed % fpsInterval);
+    timeCounter++;
+    //================================//
+    //=== Animate code begins here ===//
+    //================================//
+
+
+    if(text1Done == false){
+      drawText1();
+      //textArray.length = 23
+    }else if(text1Done == true){
+      drawText2();
+      //textArray2.length = 31
+    }
+    if(text2Done == true){
+      return;
+    }
+//------------------------------------------------------------------//
+  }
+  requestAnimationFrame(animateText);
+}
+readText("Hello, my name is Mike.");
+readText2("I am a frontend developer.  :)");
+animateText();
+
+</script>
+
+
+  </body>
+</html>
